@@ -17,7 +17,7 @@ def on_created(event):
         print("Ne pdf naum")
     else:
         impressoraVeia =win32print.GetDefaultPrinter()
-        win32print.SetDefaultPrinter('EPSON L365 Series')
+        win32print.SetDefaultPrinter('NOME DA IMPRESSORA AQUI')
         pdf_dir = path
         shutil.move(pdf_dir, "C:/Users/Public/notas"+arraypath[1].strip('/\/')+'.'+arraypath[2].strip('/\/'))
         for f in glob("C:/Users/Public/notas"+arraypath[1].strip('/\/')+'.'+arraypath[2].strip('/\/'), recursive=True):
