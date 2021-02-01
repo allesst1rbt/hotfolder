@@ -20,18 +20,22 @@ def on_created(event):
     if path.find(".pdf") == -1:
         print("Ne pdf naum")
     else:
-        impressoraVeia =win32print.GetDefaultPrinter()
-        win32print.SetDefaultPrinter('PDF Architect 8') 
+        if path.find('nota') == -1:
+            print('nao e nota fiscal') 
+        else: 
+            impressoraVeia =win32print.GetDefaultPrinter()
+            win32print.SetDefaultPrinter('Brother DCP-L5652DN Printer') 
         
-        dst = os.path.join(r"C:/Users/Public/notas/",arraypath[-1])
-        dst = dst.replace('/', '\\')
-        src =(os.path.normpath(path_pai + arraypath[-1]))
-        src = src.replace('/', '\\')
-        copy2(src,dst)
-        win32api.ShellExecute(0, "print", dst, None,  ".",  0) 
+            dst = os.path.join(r"C:/Users/Public/notas/",arraypath[-1])
+            dst = dst.replace('/', '\\')
+            src =(os.path.normpath(path_pai + arraypath[-1]))
+            src = src.replace('/', '\\')
+            copy2(src,dst)
+            win32api.ShellExecute(0, "print", dst, None,  ".",  0) 
+            win32print.SetDefaultPrinter(impressoraVeia) 
       
          
-        win32print.SetDefaultPrinter(impressoraVeia) 
+       
 def copy2(src, dst, iteration=1000):
    for x in range(iteration):
 	    with open(src, 'rb') as fsrc:
