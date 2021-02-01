@@ -1,11 +1,13 @@
 # hotfolder
 ## Instruções para ultilização
- ### 1.Instalar o python 3.8 na maquina link:https://drive.google.com/file/d/132hWuV4TlBiJ5dXdmMEqllM_pWS8ozCx/view?usp=sharing
- ### 2.executar (clique duas vezes no arquivo) o arquivo instalador.ps1 para instalação dos pacotes necessários
+ ### 1.Instalar o python 3.9 na maquina link:https://www.microsoft.com/pt-br/p/python-39/9p7qfqmjrfp7?activetab=pivot:overviewtab
+ ### 2.execute o powershell como administrador e execute as eguintes linhas:
+ #### -python -m pip install -U watchdog
+ #### -pip install pywin32
  ### 3.criar pasta para notas fiscais no path C:\Users\Public\notas
- ### 4.editar o código do inicializar.bat passando path dos downloads do usuario atuas ex:C:\Users\Pichau\Downloads
- ### 5.configurar computador para ao ligar chamar o arquivo inicializar.bat ex:https://answers.microsoft.com/pt-br/windows/forum/windows_10-other_settings-winpc/executar-uma-batch-junto-com-a/503adc02-2316-4a26-8e14-3c86856d2507
- ### 6.abrir arquivo watch.py e configurar a impressora que você vai querer usar para imprimir as notas na linha 20
+ ### 4.configurar computador para ao ligar chamar o arquivo inicializar.bat como um job, e ajeitar o path de como ele chama o arquivo watch.py
+ ### 5.abrir arquivo watch.py e configurar a impressora que você vai querer usar para imprimir as notas na linha 20
+ ### 6.criar um atalho chamando o  arquivo watch.py para caso ocorra algum erro então n vai ser preciso reiniciar o pc
  ### 7.reiniciar o computador 
  ### 8.Concluido
 
